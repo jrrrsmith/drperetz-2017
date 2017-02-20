@@ -1,0 +1,24 @@
+.recent-post {
+  color: $_navy;
+  &__date {
+    font-size: 12px;
+  }
+  &__title {
+    font-size: 20px;
+    font-style: italic;
+  }
+   a{
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__excerpt {
+    font-size: 14px;
+    a {
+      display: block;
+      float: left;
+    }
+  }
+}

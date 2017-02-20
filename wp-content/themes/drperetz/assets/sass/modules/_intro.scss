@@ -1,0 +1,15 @@
+.intro{
+  background-color: $white;
+  padding: 20px 80px;
+  &__text{
+    color: $_yellow-green;
+    font-size: 19px;
+    a{
+      color: $_sea-green;
+      text-decoration: underline;
+      &:hover{
+        color: $_sea-green-light;
+      }
+    }
+  }
+}

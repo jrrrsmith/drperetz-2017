@@ -1,0 +1,74 @@
+.header{
+
+  &__inner {
+    @include position(relative);
+  }
+
+  &__top {
+    height: 50px;
+    background-color: $light-green;
+    .button {
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    &__form {
+      float: right;
+      min-width: 500px;
+      text-align: right;
+    }
+  }
+
+  .logo-wrap {
+    float: left;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .primary-menu {
+    float: left;
+    text-align: right;
+    width: calc(100% - 285px);
+    margin-top: 28px;
+
+    li {
+      display: inline-block;
+      margin-left: 20px;
+
+      &.current_page_item a {
+        color: $_sea-green;
+        font-style: italic;
+        font-weight: 600;
+      }
+
+    }
+
+    a {
+      font-size: 14px;
+      color: $_navy;
+      &:hover {
+        color: $_sea-green;
+      }
+    }
+
+  }
+
+  &__bottom {
+    height: 75px;
+    background-color: $white;
+  }
+
+  .logo {
+    margin-top: 12px;
+  }
+
+  .button--transparent {
+    border-color: $white;
+    width: 181px;
+    text-align: center;
+    margin-left: 15px;
+  }
+
+}

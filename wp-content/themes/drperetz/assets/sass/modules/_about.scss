@@ -1,0 +1,57 @@
+.about-intro {
+  @include clearfix;
+  margin-bottom: 40px;
+
+  &__left {
+    @include span-columns(7);
+    font-size: 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__right {
+    @include span-columns(5);
+
+    img {
+      width: 90%;
+    }
+
+  }
+}
+
+.about-details {
+  font-size: 18px;
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__bottom {
+    
+    h2 {
+      @extend %stylized-text;
+      text-transform: none;
+      color: $_aqua-green;
+      font-size: 24px;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    text-align: center;
+
+    .button {
+      margin: 0 10px;
+    }
+
+  }
+
+}

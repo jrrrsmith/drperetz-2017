@@ -1,0 +1,47 @@
+.home-video {
+
+  $vid-section-spacing: 30px;
+
+  background-image: url('../images/vid-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: $vid-section-spacing 0;
+
+  &__mask {
+    position: absolute;
+    background-color: rgba($_navy, .8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  h2 {
+    @extend %stylized-text;
+    color: $_sea-green-light;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 $vid-section-spacing;
+  }
+
+  &__wrap {
+    @include span-columns(10);
+    @include shift(1);
+    margin-bottom: $vid-section-spacing;
+  }
+
+  .button {
+    clear: both;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 200px;
+    width: auto;
+    display: block;
+  }
+
+}
