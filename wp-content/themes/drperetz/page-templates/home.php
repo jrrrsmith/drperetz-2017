@@ -8,7 +8,6 @@ get_header();
 
 ?>
 <section class="home-body">
-  <?php include 'partials/hero.php'  ?>
   <div class="wrap">
     <?php include 'partials/home/intro.php'  ?>
     <?php include 'partials/home/elements.php'  ?>

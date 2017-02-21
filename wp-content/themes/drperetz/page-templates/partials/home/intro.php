@@ -1,3 +1,7 @@
 <div class="intro">
-  <p class="intro__text">Nutritional therapy through diet and supplementation is a key element toward treating your skin. A modified anti-inflammatory and gluten-free diet is essential. Exercise and nature therapy are vital for your immune and neurologic health— two systems directly involved in the disease process of psoriasis. Finding consistent peace and mental rest through a mind-body practice of your choice is as critical to success as the more tangible elements of the program. The psoriasis treatment program involves 3 main <a href="#">elements of care</a>:</p>
+  <div class="intro__title-wrap">
+    <h1><?php the_field('page_title'); ?></h1>
+    <h2><?php the_field('page_subtitle'); ?></h2>
+  </div>
+  <p><?php the_field('text_block'); ?></p>
 </div>
