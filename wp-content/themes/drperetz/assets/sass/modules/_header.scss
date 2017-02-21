@@ -27,10 +27,13 @@
     }
   }
 
+  .menu-primary-container {
+    float: right;
+
+  }
+
   .primary-menu {
-    float: left;
     text-align: right;
-    width: calc(100% - 285px);
     margin-top: 28px;
 
     li {
@@ -38,18 +41,18 @@
       margin-left: 20px;
 
       &.current_page_item a {
-        color: $_sea-green;
-        font-style: italic;
+        color: $light-green;
         font-weight: 600;
       }
 
     }
 
     a {
-      font-size: 14px;
-      color: $_navy;
+      font-size: 16px;
+      color: $slate;
+      font-weight: bold;
       &:hover {
-        color: $_sea-green;
+        color: $light-green;
       }
     }
 
