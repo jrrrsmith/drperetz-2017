@@ -1,74 +1,40 @@
 .elements{
-  @include background-image(linear-gradient($_navy 0, $_sea-green 20%));
-  color: $white;
   @include clearfix;
-  position: relative;
-  border-top-left-radius: $border-radius-size;
-  border-top-right-radius: $border-radius-size;
+  margin-top: 40px;
 }
 
 .element-item{
-  padding: 30px 15px 15px;
-  width: 33.33333%;
+  width: calc(33.333% - 40px);
   float: left;
   display: inline-block;
-  background-color: $_navy;
-  border-top-left-radius: $border-radius-size;
-  border-top-right-radius: $border-radius-size;
-  &__top{
-    cursor: pointer;
-    text-align: center;
-    &:hover{
-      .element-item__title,
-      .element-item__img{
-        opacity: 1;
-      }
+  margin-right: 60px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+
+    h1 {
+      color: $light-green;
     }
   }
-  &__title{
-    @extend %stylized-text;
-    font-size: 24px;
-    opacity: .5;
-    transition: opacity .3s ease-in-out;
-    display: inline-block;
-    border-bottom: 1px solid $white;
-  }
-  &__img{
+
+  img{
     width: 100%;
-    opacity: .5;
-    transition: opacity .3s ease-in-out;
-    backface-visibility: hidden;
+    opacity: .85;
+    @include transition(opacity .3s ease-in-out);
+    border-radius: 25px;
   }
-  &__info{
-    display: none;
+
+  h1 {
+    text-align: center;
+    color: $slate;
+    margin-top: 10px;
+    @include transition(color .3s ease-in-out);
   }
-  &__text{
-    font-size: 16px;
-    margin-top: 16px;
-    a{
-      font-weight: 700;
-      font-style: italic;
-      color: inherit;
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-  }
-  &--active{
-    padding: 30px 15px;
-    background-color: $_sea-green;
-    .element-item{
-      &__info{
-        display: block;
-      }
-      &__img,
-      &__title{
-        opacity: 1;
-      }
-    }
-  }
-  .button{
-    bottom: 14%;
-    position: absolute;
-  }
+
 }
