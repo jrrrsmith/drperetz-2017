@@ -40,47 +40,37 @@
   }
 
   &__bottom {
-    background-color: $_navy;
+    background-color: $white;
     padding: 10px 0;
-    overflow: hidden;
-    color: $_sea-green-light;
+    border-top: 1px solid $slate;
+    position: relative;
+    font-family: $primary-font;
 
     &__left {
-      @include span-columns(2);
-      position: relative;
-      background-color: $white;
-      &:before {
-        position: absolute;
-        top: -10px;
-        height: calc(100% + 40px);
-        width: 9999999px;
-        right: -10px;
-        background-color: $white;
-        content: '';
-        z-index: 1;
+      width: 175px;
+      display: block;
+      float: left;
+      margin-right: 0;
+
+      img {
+        width: 100%;
       }
     }
 
+    &__center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+    }
+
     &__right {
-      @include span-columns(10);
-      padding-top: 10px;
-    }
-
-    &__links {
       float: right;
-    }
-
-    .logo {
-      position: relative;
-      z-index: 2;
-      margin-top: 10px;
     }
 
     .social-icons {
       color: inherit;
       display: inline-block;
-      margin-right: 35px;
-      float: left;
       padding-top: 4px;
       a {
         color: inherit;
@@ -106,24 +96,6 @@
         text-decoration: none;
 
       }
-    }
-
-  }
-
-  h2 {
-    @extend %stylized-text;
-    text-align: left;
-    font-size: 28px;
-    color: $_aqua-green;
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-
-      &:hover {
-        color: lighten($_aqua-green, 20%);
-      }
-
     }
 
   }
