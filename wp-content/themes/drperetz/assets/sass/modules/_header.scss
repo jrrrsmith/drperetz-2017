@@ -61,6 +61,7 @@
   &__bottom {
     height: 75px;
     background-color: transparent;
+    @include transition(background-color .3s ease-in-out);
   }
 
   .logo {

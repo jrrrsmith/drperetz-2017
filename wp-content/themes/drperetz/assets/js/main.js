@@ -1,3 +1,15 @@
+// Fixed Navigation on Scroll
+
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 50) {
+      $('.header__bottom').addClass('header-fixed');
+      $('#page').addClass('header-fixed');
+    }
+    else {
+      $('.header__bottom').removeClass('header-fixed');
+      $('#page').removeClass('header-fixed');
+    }
+});
 // Elements of Care tab functionality
 
 // $(document).ready(function () {

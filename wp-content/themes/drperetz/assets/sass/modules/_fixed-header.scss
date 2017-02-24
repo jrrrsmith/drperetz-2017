@@ -1,0 +1,14 @@
+.header-fixed {
+
+  &.header__bottom {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+  }
+  &#page {
+    padding-top: 75px;
+  }
+}
