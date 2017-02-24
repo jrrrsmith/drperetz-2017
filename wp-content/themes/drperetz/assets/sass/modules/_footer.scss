@@ -20,15 +20,6 @@
       }
     }
 
-    .email-link {
-      color: $_aqua-green;
-      font-size: 18px;
-      &:hover {
-        opacity: .7;
-        text-decoration: none;
-      }
-    }
-
     &__left {
       @include span-columns(8);
     }
@@ -41,7 +32,7 @@
 
   &__bottom {
     background-color: $white;
-    padding: 10px 0;
+    padding: 20px 0;
     border-top: 1px solid $slate;
     position: relative;
     font-family: $primary-font;
@@ -51,6 +42,7 @@
       display: block;
       float: left;
       margin-right: 0;
+      height: 31px;
 
       img {
         width: 100%;
@@ -62,10 +54,29 @@
       top: 50%;
       left: 50%;
       @include transform(translate(-50%, -50%));
+
+      .email-link {
+        font-size: 14px;
+        color: $slate;
+        margin-right: 20px;
+        padding-top: 4px;
+        float: left;
+
+        &:hover {
+          color: lighten($slate, 20%);
+        }
+      }
+
     }
 
     &__right {
       float: right;
+      margin-top: 6px;
+      font-size: 14px;
+
+      a {
+        text-decoration: underline;
+      }
     }
 
     .social-icons {
@@ -84,17 +95,6 @@
         &:first-of-type {
           margin-right: 15px;
         }
-      }
-    }
-
-    a {
-      color: inherit;
-      font-size: 14px;
-      margin-right: 20px;
-      &:hover {
-        opacity: .7;
-        text-decoration: none;
-
       }
     }
 
