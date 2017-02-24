@@ -6,6 +6,18 @@
 
   add_action('init', 'init_remove_support',100);
 
+  if( function_exists('acf_add_options_page') ) {
+  
+    acf_add_options_page(array(
+      'page_title'  => 'Disclaimer',
+      'menu_title'  => 'Disclaimer',
+      'menu_slug'   => 'disclaimer',
+      'capability'  => 'edit_posts',
+      'redirect'    => false
+    ));
+    
+  }
+
 
   // function custom_post_type() {
   //  $labels = array(

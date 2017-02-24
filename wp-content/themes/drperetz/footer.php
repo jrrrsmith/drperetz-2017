@@ -18,5 +18,11 @@
       </div>
     </div>
   </div>
+  <div class="disclaimer">
+    <div class="wrap">
+      <span class="disclaimer__title">Disclaimer</span>
+      <p><?php the_field('disclaimer_txt', 'option'); ?></p>
+    </div>
+  </div>
 </footer>
 <?php include 'page-templates/partials/foot.php'  ?>
