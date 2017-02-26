@@ -18,6 +18,19 @@
     
   }
 
+  function replace_admin_menu_icons_css() {
+      ?>
+      <style>
+        #adminmenu #toplevel_page_disclaimer div.wp-menu-image:before {
+          content: "\f534";
+        }
+        
+      </style>
+      <?php
+  }
+
+  add_action( 'admin_head', 'replace_admin_menu_icons_css' );
+
 
   // function custom_post_type() {
   //  $labels = array(
