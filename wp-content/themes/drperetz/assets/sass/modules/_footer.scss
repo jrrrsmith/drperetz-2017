@@ -20,67 +20,96 @@
       }
     }
 
-    .email-link {
-      color: $_aqua-green;
-      font-size: 18px;
-      &:hover {
-        opacity: .7;
-        text-decoration: none;
-      }
-    }
-
     &__left {
       @include span-columns(8);
+
+      h2 {
+        margin-bottom: 30px;
+
+        a {
+          text-decoration: underline;
+        }
+      }
     }
 
     &__right {
       @include span-columns(4);
+      text-align: center;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .button {
+        margin: 0 auto 30px;
+      }
+
+      .social-icons {
+        color: $light-green;
+      }
+
+      .email-link {
+        color: $slate;
+        font-size: 18px;
+        font-family: $primary-font;
+        font-weight: 200;
+      }
     }
 
   }
 
   &__bottom {
-    background-color: $_navy;
-    padding: 10px 0;
-    overflow: hidden;
-    color: $_sea-green-light;
+    background-color: $white;
+    padding: 20px 0;
+    border-top: 1px solid $slate;
+    position: relative;
+    font-family: $primary-font;
 
     &__left {
-      @include span-columns(2);
-      position: relative;
-      background-color: $white;
-      &:before {
-        position: absolute;
-        top: -10px;
-        height: calc(100% + 40px);
-        width: 9999999px;
-        right: -10px;
-        background-color: $white;
-        content: '';
-        z-index: 1;
+      width: 175px;
+      display: block;
+      float: left;
+      margin-right: 0;
+      height: 31px;
+
+      img {
+        width: 100%;
       }
     }
 
+    &__center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+
+      .email-link {
+        font-size: 14px;
+        color: $slate;
+        margin-right: 20px;
+        padding-top: 4px;
+        float: left;
+
+        &:hover {
+          color: lighten($slate, 20%);
+        }
+      }
+
+    }
+
     &__right {
-      @include span-columns(10);
-      padding-top: 10px;
-    }
-
-    &__links {
       float: right;
-    }
+      margin-top: 6px;
+      font-size: 14px;
 
-    .logo {
-      position: relative;
-      z-index: 2;
-      margin-top: 10px;
+      a {
+        text-decoration: underline;
+      }
     }
 
     .social-icons {
       color: inherit;
       display: inline-block;
-      margin-right: 35px;
-      float: left;
       padding-top: 4px;
       a {
         color: inherit;
@@ -97,42 +126,13 @@
       }
     }
 
-    a {
-      color: inherit;
-      font-size: 14px;
-      margin-right: 20px;
-      &:hover {
-        opacity: .7;
-        text-decoration: none;
-
-      }
-    }
-
-  }
-
-  h2 {
-    @extend %stylized-text;
-    text-align: left;
-    font-size: 28px;
-    color: $_aqua-green;
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-
-      &:hover {
-        color: lighten($_aqua-green, 20%);
-      }
-
-    }
-
   }
 
   .button {
     display: block;
-    max-width: 250px;
-    margin: 10px 0;
+    max-width: 202px;
     text-align: center;
+    font-size: 16px;
   }
 
 }

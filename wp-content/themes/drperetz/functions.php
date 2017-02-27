@@ -6,6 +6,42 @@
 
   add_action('init', 'init_remove_support',100);
 
+  if( function_exists('acf_add_options_page') ) {
+  
+    acf_add_options_page(array(
+      'page_title'  => 'Disclaimer',
+      'menu_title'  => 'Disclaimer',
+      'menu_slug'   => 'disclaimer',
+      'capability'  => 'edit_posts',
+      'redirect'    => false
+    ));
+    
+  }
+
+  function replace_admin_menu_icons_css() {
+      ?>
+      <style>
+        #adminmenu #toplevel_page_disclaimer div.wp-menu-image:before {
+          content: "\f534";
+        }
+        
+      </style>
+      <?php
+  }
+
+  add_action( 'admin_head', 'replace_admin_menu_icons_css' );
+
+  // Customizing Read More link text, and excerpt length
+  function new_excerpt_more($more) {
+         global $post;
+    return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> read more...</a>';
+  }
+  add_filter('excerpt_more', 'new_excerpt_more');
+
+  function wpdocs_custom_excerpt_length( $length ) {
+      return 39;
+  }
+  add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
   // function custom_post_type() {
   //  $labels = array(
