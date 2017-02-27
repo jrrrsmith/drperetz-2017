@@ -1,0 +1,62 @@
+.cta {
+  background-color: $light-green;
+
+  &__inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__half {
+    width: calc(50% - 24px);
+    margin-right: 40px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+  }
+
+  &__title {
+    font-family: $primary-font;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 200;
+    font-style: italic;
+    width: calc(45% - 25px);
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+    padding-top: 34px;
+
+    span {
+      font-weight: 900;
+      color: $white;
+
+      em {
+        color: $slate;
+      }
+    }
+  }
+
+  &__info {
+    display: inline-block;
+    width: calc(55%);
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      font-family: $primary-font;
+      color: $slate;
+    }
+  }
+
+  .button.caps {
+    text-transform: uppercase;
+  }
+
+  .button {
+    max-width: none;
+  }
+}

@@ -18,6 +18,18 @@
     
   }
 
+  if( function_exists('acf_add_options_page') ) {
+  
+    acf_add_options_page(array(
+      'page_title'  => 'Call to Action',
+      'menu_title'  => 'Call to Action',
+      'menu_slug'   => 'call-to-action',
+      'capability'  => 'edit_posts',
+      'redirect'    => false
+    ));
+    
+  }
+
   function replace_admin_menu_icons_css() {
       ?>
       <style>

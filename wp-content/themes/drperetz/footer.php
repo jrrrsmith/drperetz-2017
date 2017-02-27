@@ -1,5 +1,6 @@
 </div> <!-- END OF PAGE -->
 <footer class="footer">
+  <?php include 'page-templates/partials/cta.php' ?>
   <?php include 'page-templates/partials/blog-latest.php' ?>
   <div class="footer__bottom">
     <div class="wrap">
