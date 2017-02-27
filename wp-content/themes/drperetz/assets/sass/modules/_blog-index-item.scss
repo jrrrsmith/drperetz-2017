@@ -1,0 +1,32 @@
+.blog-index-item {
+
+  &__thumb {
+    display: block;
+    float: left;
+    width: 180px;
+    height: 180px;
+  }
+
+  &__info {
+    display: block;
+    float: left;
+    width: calc(100% - 180px);
+    padding-left: 20px;
+  }
+
+  &__date {
+    font-family: $primary-font;
+    font-size: 13px;
+    line-height: 13px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: $slate;
+  }
+
+  &__excerpt {
+    line-height: 20px;
+  }
+}

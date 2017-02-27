@@ -31,6 +31,17 @@
 
   add_action( 'admin_head', 'replace_admin_menu_icons_css' );
 
+  // Customizing Read More link text, and excerpt length
+  function new_excerpt_more($more) {
+         global $post;
+    return '...<a class="moretag" href="'. get_permalink($post->ID) . '"> read more...</a>';
+  }
+  add_filter('excerpt_more', 'new_excerpt_more');
+
+  function wpdocs_custom_excerpt_length( $length ) {
+      return 39;
+  }
+  add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
   // function custom_post_type() {
   //  $labels = array(

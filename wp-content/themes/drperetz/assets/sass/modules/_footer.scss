@@ -22,10 +22,38 @@
 
     &__left {
       @include span-columns(8);
+
+      h2 {
+        margin-bottom: 30px;
+
+        a {
+          text-decoration: underline;
+        }
+      }
     }
 
     &__right {
       @include span-columns(4);
+      text-align: center;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .button {
+        margin: 0 auto 30px;
+      }
+
+      .social-icons {
+        color: $light-green;
+      }
+
+      .email-link {
+        color: $slate;
+        font-size: 18px;
+        font-family: $primary-font;
+        font-weight: 200;
+      }
     }
 
   }
@@ -102,8 +130,7 @@
 
   .button {
     display: block;
-    max-width: 250px;
-    margin: 10px 0;
+    max-width: 182px;
     text-align: center;
   }
 

@@ -1,19 +1,40 @@
 <div class="footer__top">
   <div class="wrap">
     <div class="footer__top__left">
-      <h2>the latest from the doctor's <a href="#">blog</a>:</h2>
-      <div class="recent-post">
-        <span class="recent-post__date">Friday, March 18, 2016</span>
-        <h3 class="recent-post__title">
-          <a href="#">One quick morning activity to rejuvenate your skin</a>
-        </h3>
-        <p class="recent-post__excerpt">Developing a regular meditation practice is an important element to the treatment of psoriasis.  And the benefits willextend far beyond your skin!  Mindfullness through nature, exercise, cooking and creative expression…<a href="#">Read more...</a></p>
-      </div>
+      <h2>the latest from the doctor's <a href="<?php echo esc_url( home_url( '/' ) ); ?>blog">blog</a>:</h2>
+      <?php
+        $args = array( "showposts" => 1 );                  
+        query_posts($args);
+
+        $content = "";
+
+        if( have_posts() ) : 
+          while( have_posts() ) :
+
+            the_post();
+            $link = get_permalink();
+            $title = get_the_title();
+            $thumb = get_the_post_thumbnail( $post_id, 'thumbnail' );  
+            $date = get_the_time('l, F jS, Y');                       
+
+            $content .= "<div class='blog-index-item'>";
+            $content .= "<a href='$link' class='blog-index-item__thumb'>$thumb</a>\n";
+            $content .= "<div class='blog-index-item__info'>";
+            $content .= "<span class='blog-index-item__date'>" . get_the_time('l, F jS, Y') . "</span>";
+            $content .= "<a href='$link' target='_top'><h3 class='blog-index-item__title'>$title</h3></a>\n";
+            $content .= "<p class='blog-index-item__excerpt'>" . get_the_excerpt() . "</p>";
+            $content .= "</div>";
+            $content .= "</div>";
+          endwhile;
+        wp_reset_query();
+        endif;
+        echo $content; 
+      ?>
     </div>
     <div class="footer__top__right">
       <h2>stay in the know:</h2>
-      <a href="#" class="button button--navy">Schedule a consultation</a>
-      <a href="#" class="button button--navy">Sign up for the newsletter</a>
+      <a href="#" class="button button--transparent">subscribe to newsletter</a>
+      <a href="#" class="button button--blue">schedule a consultation</a>
       <div class="social-icons">
         <a href="#" class="icon-facebook"></a>
         <a href="#" class="icon-instagram"></a>
