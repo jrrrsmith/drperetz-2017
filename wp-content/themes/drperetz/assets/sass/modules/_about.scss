@@ -3,27 +3,44 @@
   margin-bottom: 40px;
 
   &__left {
-    @include span-columns(7);
-    font-size: 20px;
+    width: 50%;
+    float: left;
 
-    p {
-      margin-bottom: 20px;
+    img {
+      width: 90%;
+      margin: 0 auto;
+      display: block;
     }
+
+    
 
   }
 
   &__right {
-    @include span-columns(5);
 
-    img {
-      width: 90%;
+    width: 50%;
+    float: left;
+
+    p {
+      margin-bottom: 20px;
+      color: $slate;
+      font-size: 24px;
+      line-height: 26px;
     }
 
   }
 }
 
 .about-details {
-  font-size: 18px;
+
+  margin-bottom: 40px;
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    margin-bottom: 25px;
+  }
 
   &__top {
     margin-bottom: 40px;
@@ -32,24 +49,15 @@
   &__bottom {
     
     h2 {
-      @extend %stylized-text;
       text-transform: none;
-      color: $_aqua-green;
+      color: $slate;
       font-size: 24px;
     }
 
-    .italic {
-      font-style: italic;
-    }
-
-  }
-
-  &__buttons {
-    margin-top: 40px;
-    text-align: center;
-
-    .button {
-      margin: 0 10px;
+    p {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 5px;
     }
 
   }
