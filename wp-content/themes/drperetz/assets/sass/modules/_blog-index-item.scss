@@ -1,4 +1,5 @@
 .blog-index-item {
+  @include clearfix;
 
   &__thumb {
     display: block;
