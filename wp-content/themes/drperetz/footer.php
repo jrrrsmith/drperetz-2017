@@ -8,7 +8,7 @@
         <img src="<?php bloginfo('template_url');?>/assets/images/logo.png" class="logo" />
       </a>
       <div class="footer__bottom__center">
-        <a href="mailto:info@drchristianperetz.com" class="email-link">info@drchristianperetz.com</a>
+        <a href="mailto:connect@drchristinaperetz.com" class="email-link">connect@drchristinaperetz.com/a>
         <div class="social-icons">
           <a href="#" class="icon-facebook"></a>
           <a href="#" class="icon-instagram"></a>

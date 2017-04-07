@@ -39,7 +39,7 @@
         <a href="#" class="icon-facebook"></a>
         <a href="#" class="icon-instagram"></a>
       </div>
-      <a href="mailto:info@drchristianperetz.com" class="email-link">info@drchristianperetz.com</a>
+      <a href="mailto:connect@drchristinaperetz.com" class="email-link">connect@drchristinaperetz.com</a>
     </div>
   </div>
 </div>
