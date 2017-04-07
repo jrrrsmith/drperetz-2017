@@ -27,7 +27,11 @@
     color: $slate;
   }
 
-  &__excerpt {
+  p {
     line-height: 20px;
   }
+
+  // &__excerpt {
+  //   line-height: 20px;
+  // }
 }

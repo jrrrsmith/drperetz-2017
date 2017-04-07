@@ -1,0 +1,36 @@
+.blog-sidebar {
+  width: 200px;
+  margin-left: 40px;
+  float: left;
+  padding-top: 30px;
+
+  &__block {
+    background-color: $light-green;
+    font-family: $primary-font;
+    font-size: 26px;
+    line-height: 29px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+
+  a {
+    color: $slate;
+    font-weight: 200;
+  }
+
+  span {
+    color: $white;
+    font-style: italic;
+    font-weight: 600;
+
+    em {
+      color: $slate;
+    }
+  }
+}
+
+.has-sidebar {
+  width: calc(100% - 240px);
+  float: left;
+}

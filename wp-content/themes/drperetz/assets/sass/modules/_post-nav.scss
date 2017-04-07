@@ -1,0 +1,60 @@
+.post-nav {
+  clear: both;
+  @include clearfix;
+  margin-bottom: 50px;
+
+  &__item {
+    float: left;
+    width: calc(50% - 25px);
+    margin-right: 50px;
+
+    &.post-next {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 36px;
+    font-weight: 200;
+    color: $sea-blue;
+    font-family: $primary-font;
+    display: block;
+    margin-bottom: 30px;
+
+    &:hover {
+      color: darken($sea-blue, 30%);
+    }
+  }
+
+  &__img {
+    width: 100px;
+    float: left;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__info {
+    font-family: $primary-font;
+    float: left;
+    width: calc(100% - 100px);
+    padding-left: 15px;
+    color: $slate;
+
+    span {
+      display: block;
+      font-size: 13px;
+    }
+    h4 a {
+      color: $slate;
+      font-size: 20px;
+      font-weight: 400;
+
+      &:hover {
+        color: darken($slate, 30%);
+      }
+    }
+  }
+}

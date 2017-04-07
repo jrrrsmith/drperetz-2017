@@ -1,17 +1,57 @@
 .blog-page {
   @include clearfix;
 
-  .blog-index {
-    @include span-columns(9);
-
-    &-item {
-      padding-bottom: 30px;
-      border-bottom: 1px solid $slate;
-    }
+  &__title {
+    padding-left: 50px;
+    margin: 50px 0 70px;
   }
 
-  .blog-sidebar {
-    @include span-columns(3);
+  .blog-index {
+
+    &-item {
+      padding: 30px 0;
+      border-bottom: 1px solid $slate;
+
+    }
+
+    .navigation h2 {
+      display: none;
+    }
+
+    .nav-links {
+      text-align: center;
+      font-size: 18px;
+      margin: 30px 0;
+
+      .page-numbers {
+        margin: 0 5px;
+      }
+
+      .next {
+        display: none;
+      }
+    }
+  }
+}
+
+.moretag {
+  display: block;
+  text-decoration: underline;
+  font-style: italic;
+  font-family: $primary-font;
+  font-size: 14px;
+}
+
+.blog {
+
+  .footer__top__left {
+    display: none;
+  }
+
+  .footer__top__right {
+    float: none;
+    width: 333px;
+    margin: 0 auto;
   }
 }
 

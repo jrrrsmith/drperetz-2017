@@ -1,0 +1,49 @@
+.blog-single {
+
+  @include clearfix;
+
+  &__post {
+    margin-top: 30px;
+  }
+
+  &__date {
+    font-size: 18px;
+    font-family: $primary-font;
+    color: $slate;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__caption {
+    font-size: 16px;
+    color: $sea-blue;
+    display: block;
+    text-align: right;
+  }
+
+  &__content {
+    margin-top: 30px;
+    color: $black;
+
+    p {
+      margin-bottom: 30px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+}
