@@ -22,3 +22,18 @@ $(document).ready(function() {
     }, 1500, "easeInOutCubic");
   });
 });
+
+// Enable Checkbox on Scroll
+
+$(document).ready(function() {
+
+  $("#checkAgree :input").attr("disabled", true);
+
+  $('#agreement').scroll(function () {
+      if ($(this).scrollTop() == $(this)[0].scrollHeight - $(this).height()) {
+          $('#checkAgree :input').removeAttr('disabled');
+          $('.instruction-form').addClass('faded');
+      }
+  });
+
+});
