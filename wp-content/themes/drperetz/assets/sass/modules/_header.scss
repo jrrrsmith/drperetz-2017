@@ -30,11 +30,32 @@
   .menu-primary-container {
     float: right;
 
+    @include media($large-tablet) {
+      position: absolute;
+      right: -100%;
+      float: none;
+      width: 100vw;
+      background-color: $white;
+      padding: 100px 50px;
+      @include transition(all .3s ease-in-out);
+      //right: -100%;
+
+      &.menu-open {
+        right: 0;
+      }
+
+    }
+
   }
 
   .primary-menu {
     text-align: right;
     margin-top: 28px;
+
+    @include media($large-tablet) {
+      margin-top: 0;
+      text-align: center;
+    }
 
     li {
       display: inline-block;
@@ -43,6 +64,11 @@
       &.current_page_item a {
         color: $light-green;
         font-weight: 600;
+      }
+
+      @include media($large-tablet) {
+        display: block;
+        margin-left: 0;
       }
 
     }
@@ -54,6 +80,10 @@
       &:hover {
         color: $light-green;
       }
+
+      @include media($large-tablet) {
+        font-size: 24px;
+      }
     }
 
   }
@@ -62,6 +92,10 @@
     height: 75px;
     background-color: transparent;
     @include transition(background-color .3s ease-in-out);
+
+    @include media($large-tablet) {
+      position: relative;
+    }
   }
 
   .logo {
