@@ -15,7 +15,7 @@ $(window).scroll(function(){
 
 $(document).ready(function() {
 
-  $(".faq-links a").on("click", function( e ) {
+  $(".faq-links a").on("click touchstart", function( e ) {
     e.preventDefault();
     $("body, html").animate({ 
         scrollTop: $( $(this).attr('href') ).offset().top - 72
@@ -34,6 +34,17 @@ $(document).ready(function() {
           $('#checkAgree :input').removeAttr('disabled');
           $('.instruction-form').addClass('faded');
       }
+  });
+
+});
+
+// Mobile Nav
+$(document).ready(function() {
+
+  $('.mobile-nav-button').on('click touchstart', function( e ) {
+    e.preventDefault();
+    $(this).toggleClass('menu-open');
+    $('.menu-primary-container').toggleClass('menu-open');
   });
 
 });

@@ -10,6 +10,9 @@
     </div>
   </div>
   <div class="header__bottom">
+    <div class="mobile-nav-button">
+      <span></span>      
+    </div>
     <div class="header__inner wrap">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo-wrap">
         <img src="<?php bloginfo('template_url');?>/assets/images/logo.png" class="logo" />
