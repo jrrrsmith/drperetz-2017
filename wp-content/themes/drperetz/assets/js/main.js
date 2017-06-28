@@ -48,3 +48,7 @@ $(document).ready(function() {
   });
 
 });
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'http://www.drchristinaperetz.com/appointment-booking/';
+}, false );
