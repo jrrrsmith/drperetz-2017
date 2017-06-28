@@ -32,16 +32,17 @@
 
     @include media($large-tablet) {
       position: absolute;
-      right: -100%;
+      right: 0;
       float: none;
       width: 100vw;
       background-color: $white;
       padding: 100px 50px;
       @include transition(all .3s ease-in-out);
       //right: -100%;
+      @include transform(translateX(-100%));
 
       &.menu-open {
-        right: 0;
+        @include transform(translateX(0));
       }
 
     }
