@@ -1,6 +1,15 @@
 // div.wpcf7 input[type="checkbox"] {
 //   -webkit-appearance: checkbox;
 // }
+.scheduler-body {
+  overflow: hidden;
+
+  iframe {
+    @include media($mobile) {
+      width: 100%;
+    }
+  }
+}
 
 .form-body {
   margin-bottom: 50px;
@@ -41,6 +50,15 @@
       width: 40%;
       float: left;
       margin-right: 10px;
+
+      @include media($mobile) {
+        width: calc(50% - 5px);
+        margin-right: 10px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
 
       br {
         display: none;
@@ -109,6 +127,10 @@
     color: $white;
     border-color: $sea-blue;
     background-color: $sea-blue;
+
+    @include media($sm-phone) {
+      font-size: 18px;
+    }
 
     &:focus {
       outline: none;

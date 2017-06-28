@@ -55,10 +55,15 @@
     width: 158px;
     float: left;
     padding-left: 30px;
+
+    @include media($mobile) {
+      padding-left: 0;
+      width: 130px;
+    }
   }
 
   &__right {
-    width: calc(100% - 158px);
+    width: calc(100% - 130px);
     float: left;
     padding-left: 20px;
   }

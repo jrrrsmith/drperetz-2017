@@ -8,6 +8,12 @@
     width: calc(50% - 25px);
     margin-right: 50px;
 
+    @include media($mobile) {
+      width: 100%;
+      margin-right: 0;
+      @include clearfix;
+    }
+
     &.post-next {
       margin-right: 0;
     }
@@ -20,6 +26,10 @@
     font-family: $primary-font;
     display: block;
     margin-bottom: 30px;
+
+    @include media($mobile) {
+      margin-bottom: 5px;
+    }
 
     &:hover {
       color: darken($sea-blue, 30%);

@@ -16,6 +16,12 @@
       float: right;
       min-width: 500px;
       text-align: right;
+
+      @include media($med-mobile) {
+        float: none;
+        min-width: 0;
+        text-align: left;
+      }
     }
   }
 
@@ -24,6 +30,10 @@
 
     img {
       width: 300px;
+
+      @include media($med-mobile) {
+        width: 230px;
+      }
     }
   }
 
@@ -43,6 +53,7 @@
 
       &.menu-open {
         @include transform(translateX(0));
+        z-index: 1;
       }
 
     }
@@ -101,6 +112,10 @@
 
   .logo {
     margin-top: 12px;
+
+    @include media($med-mobile) {
+      margin-top: 17px;
+    }
   }
 
   .button--transparent {
@@ -108,6 +123,10 @@
     width: 181px;
     text-align: center;
     margin-left: 15px;
+
+    @include media($med-mobile) {
+      width: auto;
+    }
   }
 
 }

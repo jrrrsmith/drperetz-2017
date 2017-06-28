@@ -26,6 +26,10 @@
     padding-left: 75px;
     margin-bottom: 15px;
 
+    @include media($mobile) {
+      padding-left: 25px;
+    }
+
     &:before {
       position: absolute;
       content: '';
@@ -35,6 +39,10 @@
       border-radius: 50px;
       top: 8px;
       left: 30px;
+
+      @include media($mobile) {
+        left: 7px;
+      }
     }
   }
 
@@ -64,6 +72,10 @@
     .price-item {
       font-size: 28px;
 
+      @include media($mobile) {
+        font-size: 22px;
+      }
+
       &__cost {
         color: $black;
       }
@@ -71,6 +83,10 @@
 
     .package-item {
       font-size: 28px;
+
+      @include media($mobile) {
+        font-size: 22px;
+      }
 
       &__cost {
         color: $black;
@@ -107,6 +123,10 @@
       font-size: 22px;
       max-width: 310px;
       text-align: center;
+
+      @include media($sm-phone) {
+        font-size: 18px;
+      }
     }
   }
 }

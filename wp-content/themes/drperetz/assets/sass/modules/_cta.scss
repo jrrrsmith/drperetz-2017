@@ -4,6 +4,11 @@
   &__inner {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    @include media($mobile) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__half {
@@ -11,6 +16,12 @@
     margin-right: 40px;
     display: inline-block;
     vertical-align: top;
+
+    @include media($tablet) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
 
     &:last-of-type {
       margin-right: 0;
@@ -30,6 +41,11 @@
     vertical-align: top;
     padding-top: 34px;
 
+    @include media($mobile) {
+      width: 100%;
+      margin-right: 0;
+    }
+
     span {
       font-weight: 900;
       color: $white;
@@ -43,6 +59,11 @@
   &__info {
     display: inline-block;
     width: calc(55%);
+
+    @include media($mobile) {
+      width: 100%;
+      margin-top: 15px;
+    }
 
     p {
       font-size: 18px;
