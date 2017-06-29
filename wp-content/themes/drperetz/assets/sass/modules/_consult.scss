@@ -47,6 +47,8 @@
   }
 
   &__pricing {
+    display: none;
+    
     padding-top: 40px;
     background-color: $light-green;
     font-family: $primary-font;

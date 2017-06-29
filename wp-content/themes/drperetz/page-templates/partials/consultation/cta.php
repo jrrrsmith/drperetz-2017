@@ -10,7 +10,7 @@
     <div class="wrap">
       <h1>Become a patient of Dr. Peretz</h1>
       <?php the_field('cta_bottom'); ?>
-      <a href="#" class="button button--green">Go to Whole Family MD</a>
+      <a href="http://www.wholefamilymd.org" class="button button--green">Go to Whole Family MD</a>
     </div>
   </div>
 </div>
