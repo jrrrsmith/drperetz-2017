@@ -1,0 +1,36 @@
+#mc_embed_signup {
+  position: fixed;
+  width: 320px;
+  bottom: 0;
+  right: 30px;
+  background-color: $white;
+  padding: 15px 20px 0;
+  border: 1px solid $light-green;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  @include transform(translateY(100%));
+  @include transition(all .3s ease-in-out);
+
+  &.form-show {
+    @include transform(translateY(0));
+  }
+
+  .form-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 2 4px;
+    font-size: 9px;
+    font-family: $title-font;
+    color: $slate;
+    cursor: pointer;
+    border-radius: 76px;
+    border: 1px solid $slate;
+    @include transition(all .3s ease-in-out);
+
+    &:hover {
+      background-color: $slate;
+      color: $white;
+    }
+  }
+}

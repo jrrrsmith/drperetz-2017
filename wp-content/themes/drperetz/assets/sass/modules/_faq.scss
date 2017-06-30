@@ -63,8 +63,12 @@
   }
 
   &__right {
-    width: calc(100% - 130px);
+    width: calc(100% - 158px);
     float: left;
     padding-left: 20px;
+
+    @include media($mobile) {
+      width: calc(100% - 130px);
+    }
   }
 }

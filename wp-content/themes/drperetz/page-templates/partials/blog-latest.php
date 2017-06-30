@@ -33,7 +33,7 @@
     </div>
     <div class="footer__top__right">
       <h2>stay in the know:</h2>
-      <a href="#" class="button button--transparent">subscribe to newsletter</a>
+      <a href="#" class="button button--transparent mailchimp-show-form">subscribe to newsletter</a>
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>consultation" class="button button--blue">contact</a>
       <div class="social-icons">
         <a href="#" class="icon-facebook"></a>

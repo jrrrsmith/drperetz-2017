@@ -49,6 +49,24 @@ $(document).ready(function() {
 
 });
 
+//Redirect to Scheduling Calendar after filling out form
+
 document.addEventListener( 'wpcf7mailsent', function( event ) {
     location = 'http://www.drchristinaperetz.com/appointment-booking/';
 }, false );
+
+//Hide and show mailchimp form
+
+$(document).ready(function() {
+
+  $('.mailchimp-show-form').on('click touchstart', function( e ) {
+    e.preventDefault();
+    $('#mc_embed_signup').addClass('form-show');
+  });
+
+  $('.form-close').on('click touchstart', function( e ) {
+    e.preventDefault();
+    $('#mc_embed_signup').removeClass('form-show');
+  });
+
+});

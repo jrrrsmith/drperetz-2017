@@ -11,7 +11,7 @@
       <div class="cta__title">Get a <span>FREE</span> copy of the Doctor's <span>e-Book</span></div>
       <div class="cta__info">
         <?php the_field('e_book_text', 'option'); ?>
-        <a href="#" class="button button--white">subscribe to newsletter</a>
+        <a href="#" class="button button--white mailchimp-show-form">subscribe to newsletter</a>
       </div>
     </div>
   </div>
