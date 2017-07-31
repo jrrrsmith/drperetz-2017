@@ -11,6 +11,17 @@
   @include transform(translateY(100%));
   @include transition(all .3s ease-in-out);
 
+  @include media($mobile) {
+    right: 0;
+    padding: 10px 20px 0;
+    font-size: 10px;
+    width: 300px;
+
+    h2 {
+      font-size: 17px;
+    }
+  }
+
   &.form-show {
     @include transform(translateY(0));
   }
@@ -19,7 +30,7 @@
     position: absolute;
     right: 5px;
     top: 5px;
-    padding: 2 4px;
+    padding: 2px 4px;
     font-size: 9px;
     font-family: $title-font;
     color: $slate;
