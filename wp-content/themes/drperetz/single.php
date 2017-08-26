@@ -3,7 +3,7 @@
 <?php while(have_posts()) : the_post(); ?>
 
   <div class="blog-single__post has-sidebar">
-    <span class="blog-single__date"><?php the_date('l, F jS, Y'); ?></span>
+    
     <h1 class='blog-single__title'><?php the_title(); ?></h1>
     <div class="blog-single__img"><?php the_post_thumbnail('full'); ?></div>
     <span class="blog-single__caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></span>

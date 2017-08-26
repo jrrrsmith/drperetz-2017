@@ -23,6 +23,11 @@
     &__left {
       @include span-columns(8);
 
+      @include media($tablet) {
+        width: 100%;
+        margin-right: 0;
+      }
+
       h2 {
         margin-bottom: 30px;
 
@@ -35,6 +40,11 @@
     &__right {
       @include span-columns(4);
       text-align: center;
+
+      @include media($tablet) {
+        width: 100%;
+        margin-top: 30px;
+      }
 
       h2 {
         margin-bottom: 30px;
@@ -72,8 +82,19 @@
       margin-right: 0;
       height: 31px;
 
+      @include media($sm-phone) {
+        width: 100%;
+        float: none;
+      }
+
       img {
         width: 100%;
+
+        @include media($sm-phone) {
+          display: block;
+          width: 60%;
+          margin: 0 auto;
+        }
       }
     }
 
@@ -82,6 +103,10 @@
       top: 50%;
       left: 50%;
       @include transform(translate(-50%, -50%));
+
+      @include media($mobile) {
+        display: none;
+      }
 
       .email-link {
         font-size: 14px;
@@ -101,6 +126,11 @@
       float: right;
       margin-top: 6px;
       font-size: 14px;
+
+      @include media($sm-phone) {
+        float: none;
+        text-align: center;
+      }
 
       a {
         text-decoration: underline;

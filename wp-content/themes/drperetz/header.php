@@ -4,8 +4,8 @@
     <div class="header__inner wrap">
       <div class="header__top__form">
         
-        <a class="button button--blue" href="<?php echo esc_url( home_url( '/' ) ); ?>consultation">Schedule a Consultation</a>
-        <a class="button button--transparent" href="#">Login</a>
+        <a class="button button--blue" href="<?php echo esc_url( home_url( '/' ) ); ?>consultation">Contact</a>
+        <!-- <a class="button button--transparent" href="#">Login</a> -->
       </div>
     </div>
   </div>

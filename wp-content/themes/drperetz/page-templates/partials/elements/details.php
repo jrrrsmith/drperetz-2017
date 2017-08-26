@@ -44,7 +44,7 @@
   </div>
   <div class="wrap element-cta">
     <h2>want to learn more?</h2>
-    <a class="button button--blue" href="<?php echo esc_url( home_url( '/' ) ); ?>consultation">Schedule a Consultation</a>
+    <a class="button button--blue" href="<?php echo esc_url( home_url( '/' ) ); ?>consultation">CONTACT</a>
   </div>
 
 

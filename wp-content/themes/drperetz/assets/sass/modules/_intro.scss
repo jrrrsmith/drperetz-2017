@@ -3,18 +3,35 @@
   
   &__title-wrap {
     padding: 40px 60px 20px;
+
+    @include media($tablet) {
+      padding: 40px 20px 20px;
+    }
+
+    @include media($med-mobile) {
+      padding: 10px 0;
+    }
   }
 
   h1 {
     font-size: 42px;
     line-height: 30px;
     margin-bottom: 10px;
+
+    @include media($sm-phone) {
+      font-size: 34px;
+    }
   }
 
   h2 {
     font-size: 32px;
     line-height: 38px;
     margin-bottom: 0;
+
+    @include media($sm-phone) {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
 
   p {

@@ -9,8 +9,17 @@
   display: inline-block;
   margin-right: 60px;
 
+  @include media($mobile) {
+    width: calc(33.333% - 7px);
+    margin-right: 10px;
+  }
+
   &:last-of-type {
     margin-right: 0;
+
+    @include media($mobile) {
+      margin-right: 0;
+    }
   }
 
   &:hover {
@@ -35,6 +44,10 @@
     color: $slate;
     margin-top: 10px;
     @include transition(color .3s ease-in-out);
+
+    @include media($mobile) {
+      font-size: 20px;
+    }
   }
 
 }

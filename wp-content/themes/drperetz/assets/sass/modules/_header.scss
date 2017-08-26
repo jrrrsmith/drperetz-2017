@@ -10,12 +10,24 @@
     .button {
       display: inline-block;
       margin-top: 8px;
+      text-align: center;
+
+      width: 181px;
+      @include media($med-mobile) {
+        width: auto;
+      }
     }
 
     &__form {
       float: right;
       min-width: 500px;
       text-align: right;
+
+      @include media($med-mobile) {
+        float: none;
+        min-width: 0;
+        text-align: left;
+      }
     }
   }
 
@@ -24,6 +36,10 @@
 
     img {
       width: 300px;
+
+      @include media($med-mobile) {
+        width: 230px;
+      }
     }
   }
 
@@ -32,16 +48,18 @@
 
     @include media($large-tablet) {
       position: absolute;
-      right: -100%;
+      right: 0;
       float: none;
       width: 100vw;
       background-color: $white;
       padding: 100px 50px;
       @include transition(all .3s ease-in-out);
       //right: -100%;
+      @include transform(translateX(-100%));
 
       &.menu-open {
-        right: 0;
+        @include transform(translateX(0));
+        z-index: 1;
       }
 
     }
@@ -100,6 +118,10 @@
 
   .logo {
     margin-top: 12px;
+
+    @include media($med-mobile) {
+      margin-top: 17px;
+    }
   }
 
   .button--transparent {
@@ -107,6 +129,10 @@
     width: 181px;
     text-align: center;
     margin-left: 15px;
+
+    @include media($med-mobile) {
+      width: auto;
+    }
   }
 
 }

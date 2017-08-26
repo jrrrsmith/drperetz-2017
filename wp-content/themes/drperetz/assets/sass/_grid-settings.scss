@@ -18,9 +18,12 @@ $tablet-portrait: 768px;
 $phone: 640px;
 $big-tablet: 900px;
 $small-desktop: 960px;
-
+$med-phone: 375px;
+$sm-mobile: 320px;
 
 $desktop: new-breakpoint(max-width $small-desktop 12);
 $large-tablet: new-breakpoint(max-width $big-tablet 12);
 $tablet: new-breakpoint(max-width $tablet-portrait 12);
 $mobile: new-breakpoint(max-width $phone 12);
+$med-mobile: new-breakpoint(max-width $med-phone 12);
+$sm-phone: new-breakpoint(max-width $sm-mobile 12);

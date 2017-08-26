@@ -4,6 +4,42 @@
 
 .faq-links {
   margin-bottom: 40px;
+  @include clearfix;
+
+  &__left {
+    float: left;
+    max-width: 620px;
+
+    @include media($tablet) {
+      float: none;
+      max-width: none;
+    }
+  }
+
+  &__right {
+    float: left;
+    width: calc(100% - 620px);
+    padding-left: 20px;
+
+    @include media($tablet) {
+      float: none;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+
+      @include media($tablet) {
+        margin: 20px 0 10px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
 
   a {
     font-size: 20px;
@@ -55,11 +91,20 @@
     width: 158px;
     float: left;
     padding-left: 30px;
+
+    @include media($mobile) {
+      padding-left: 0;
+      width: 130px;
+    }
   }
 
   &__right {
     width: calc(100% - 158px);
     float: left;
     padding-left: 20px;
+
+    @include media($mobile) {
+      width: calc(100% - 130px);
+    }
   }
 }

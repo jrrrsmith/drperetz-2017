@@ -6,7 +6,7 @@
       <div class="blog-index-item">
         <a href="<?php the_permalink(); ?>" class='blog-index-item__thumb'><?php the_post_thumbnail('thumbnail'); ?></a>
         <div class="blog-index-item__info">
-          <span class="blog-index-item__date"><?php the_date('l, F jS, Y'); ?></span>
+          
           <a href="<?php the_permalink(); ?>"><h3 class='blog-index-item__title'><?php the_title(); ?></h3></a>
           <?php the_excerpt(); ?>
         </div>

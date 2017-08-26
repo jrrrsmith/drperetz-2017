@@ -6,6 +6,10 @@
     float: left;
     width: 180px;
     height: 180px;
+
+    @include media($mobile) {
+      float: none;
+    }
   }
 
   &__info {
@@ -13,6 +17,11 @@
     float: left;
     width: calc(100% - 180px);
     padding-left: 20px;
+
+    @include media($mobile) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   &__date {

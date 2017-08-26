@@ -20,7 +20,7 @@
             $content .= "<div class='blog-index-item'>";
             $content .= "<a href='$link' class='blog-index-item__thumb'>$thumb</a>\n";
             $content .= "<div class='blog-index-item__info'>";
-            $content .= "<span class='blog-index-item__date'>" . get_the_time('l, F jS, Y') . "</span>";
+            
             $content .= "<a href='$link' target='_top'><h3 class='blog-index-item__title'>$title</h3></a>\n";
             $content .= "<p class='blog-index-item__excerpt'>" . get_the_excerpt() . "</p>";
             $content .= "</div>";
@@ -33,8 +33,8 @@
     </div>
     <div class="footer__top__right">
       <h2>stay in the know:</h2>
-      <a href="#" class="button button--transparent">subscribe to newsletter</a>
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>consultation" class="button button--blue">schedule a consultation</a>
+      <a href="#" class="button button--transparent mailchimp-show-form">subscribe to newsletter</a>
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>consultation" class="button button--blue">contact</a>
       <div class="social-icons">
         <a href="#" class="icon-facebook"></a>
         <a href="#" class="icon-instagram"></a>
